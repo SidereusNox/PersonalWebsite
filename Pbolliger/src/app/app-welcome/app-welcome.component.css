@@ -1,0 +1,23 @@
+.name-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0.5rem;
+  height: 40%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
