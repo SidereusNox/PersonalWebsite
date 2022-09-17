@@ -4,7 +4,7 @@ import { AppWelcomeComponent } from './app-welcome/app-welcome.component';
 import { EducationCardComponent } from './education-card/education-card.component';
 
 const routes: Routes = [
-  { path: "welcome", component: AppWelcomeComponent},
+  { path: "home", component: AppWelcomeComponent },
   { path: "about", component: EducationCardComponent },
 ];
 
@@ -12,4 +12,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }         

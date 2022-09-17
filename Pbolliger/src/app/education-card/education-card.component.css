@@ -2,3 +2,7 @@
     width: 4rem;
     height: 4rem;
 }
+
+.mat-card-content {
+    padding: 1rem;
+}
