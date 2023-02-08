@@ -12,6 +12,7 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { AppWelcomeComponent } from './app-welcome/app-welcome.component';
 import { EducationCardComponent } from './education-card/education-card.component';
 import { AppLoginComponent } from './app-login/app-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AppLoginComponent } from './app-login/app-login.component';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],

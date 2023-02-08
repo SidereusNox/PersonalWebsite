@@ -11,5 +11,4 @@ export class EducationCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
