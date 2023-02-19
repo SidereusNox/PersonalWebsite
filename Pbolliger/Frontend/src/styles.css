@@ -1,22 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(app/material-styles/theme.css);
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #0b9c7a);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+body { 
+  margin: 0; 
+  background-color:var(--md-sys-color-background);
+}
