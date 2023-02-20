@@ -1,0 +1,7 @@
+mat-list-item:first-child {
+    margin-top: 1rem;
+}
+
+mat-list-item:not(:first-child) {
+    margin-top: 3rem;
+}
