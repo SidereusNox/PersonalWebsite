@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(app/material-styles/theme.css);
+@import "app/material-styles/theme.css";
 
 html, body { height: 100%; }
 body { 
-  margin: 0; 
-  background-color:var(--md-sys-color-background);
+  margin: 0;
 }
