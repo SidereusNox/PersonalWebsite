@@ -26,7 +26,7 @@ $pbolliger-theme: mat.define-dark-theme((
     accent: $pbolliger-accent,
     warn: $pbolliger-warn,
   ),
-  density: 0
+  density: -2
 ));
 
 // Include theme styles for core and each component used in your app.
