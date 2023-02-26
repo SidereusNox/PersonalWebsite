@@ -25,7 +25,8 @@ $pbolliger-theme: mat.define-dark-theme((
     primary: $pbolliger-primary,
     accent: $pbolliger-accent,
     warn: $pbolliger-warn,
-  )
+  ),
+  density: 0
 ));
 
 // Include theme styles for core and each component used in your app.
@@ -35,4 +36,7 @@ $pbolliger-theme: mat.define-dark-theme((
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
