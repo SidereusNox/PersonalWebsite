@@ -4,6 +4,7 @@
 $pbolliger-primary: mat.define-palette(mat.$indigo-palette);
 $pbolliger-accent: mat.define-palette(mat.$teal-palette, A200, A100, A400);
 $pbolliger-warn: mat.define-palette(mat.$red-palette);
+$my-typography: mat.define-typography-config();
 
 $pbolliger-theme: mat.define-dark-theme((
   color: (
@@ -11,6 +12,7 @@ $pbolliger-theme: mat.define-dark-theme((
     accent: $pbolliger-accent,
     warn: $pbolliger-warn,
   ),
+   typography: $my-typography,
   density: -2
 ));
 
