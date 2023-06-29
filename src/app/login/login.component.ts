@@ -6,25 +6,41 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
+
 export class LoginComponent {
-  username!: string;
-  password!: string;
+  username: string = '';
+  password: string = '';
 
   constructor(private http: HttpClient) {}
 
   login() {
+    if(!this.credentialsComplete()){
+      return;
+    }
+
     const credentials = { username: this.username, password: this.password };
 
-    this.http.post<any>('http://localhost:3000/login', credentials).subscribe(
-      (response) => {
+    //Todo: Abstract address to a provider that can give either debug or prod address
+    let postRequest = this.http.post<any>(
+      'http://localhost:3000/login',
+      credentials
+    );
+
+    //Todo: Abstract http call
+    postRequest.subscribe({
+      next: (response) => {
         // Save the token in local storage or session storage
+        console.log("reached next!")
         localStorage.setItem('token', response.token);
         window.location.href = '/home';
       },
-      (error) => {
+      error: (error) => {
         console.error(error);
-        // Handle login error
-      }
-    );
+      },
+    });
+  }
+
+  credentialsComplete() : boolean{
+    return this.username !== '' && this.password !== '';
   }
 }

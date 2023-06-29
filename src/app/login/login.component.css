@@ -5,10 +5,14 @@
     display: flex;
 }
 
-h2, form{
+h2, form, a{
     width: 100%;
     min-width: 150px;
     max-width: 500px;
+}
+
+.back-button{
+    margin-top: 20px;
 }
 
 form > * {

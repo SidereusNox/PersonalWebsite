@@ -1,14 +1,15 @@
 <div class="container">
   <h2>Login</h2>
   <form (ngSubmit)="login()">
-    <mat-form-field>
+    <mat-form-field appearance="outline">
       <mat-label>Username</mat-label>
-      <input matInput name="username" [(ngModel)]="username">
+      <input required matInput name="username" [(ngModel)]="username">
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput type="password" name="password" [(ngModel)]="password">
+      <input required matInput type="password" name="password" [(ngModel)]="password">
     </mat-form-field>
-    <button mat-button type="submit">Login</button>
+    <button color="primary" mat-raised-button type="submit">Login</button>
   </form>
+  <a color="primary" class="back-button" mat-raised-button routerLink="../home">Back</a>
 </div>
