@@ -9,6 +9,7 @@
       <mat-label>Password</mat-label>
       <input required matInput type="password" name="password" [(ngModel)]="password">
     </mat-form-field>
+    <p matError *ngIf="invalidCredentials">Invalid username or password. Please try again!</p>
     <button color="primary" mat-raised-button type="submit">Login</button>
   </form>
   <a color="primary" class="back-button" mat-raised-button routerLink="../home">Back</a>

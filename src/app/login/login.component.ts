@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AuthenticationService } from '../authentication-service';
 
 @Component({
   selector: 'app-login',
@@ -11,33 +11,22 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private http: HttpClient) {}
+  invalidCredentials: boolean = false;
 
-  login() {
+  constructor(private authService: AuthenticationService) {}
+
+  async login(): Promise<void> {
     if(!this.credentialsComplete()){
       return;
     }
 
-    const credentials = { username: this.username, password: this.password };
+    let success = await this.authService.tryLogin(this.username, this.password);
 
-    //Todo: Abstract address to a provider that can give either debug or prod address
-    let postRequest = this.http.post<any>(
-      'http://localhost:3000/login',
-      credentials
-    );
-
-    //Todo: Abstract http call
-    postRequest.subscribe({
-      next: (response) => {
-        // Save the token in local storage or session storage
-        console.log("reached next!")
-        localStorage.setItem('token', response.token);
-        window.location.href = '/home';
-      },
-      error: (error) => {
-        console.error(error);
-      },
-    });
+    if(success){
+      window.location.href = '/home';
+    } else {
+      this.invalidCredentials = true;
+    }
   }
 
   credentialsComplete() : boolean{

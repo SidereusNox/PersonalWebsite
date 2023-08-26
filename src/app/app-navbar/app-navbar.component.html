@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
     <span>Philipp Bolliger</span>
     <div class="spacer">
-        <a routerLink="login" mat-button>Login</a>
+        <a *ngIf="!authService.isLoggedIn()" routerLink="login" mat-button>Login</a>
+        <button (click)="logout()" *ngIf="authService.isLoggedIn()" mat-button>Logout</button>
     </div>
+
 </mat-toolbar>
